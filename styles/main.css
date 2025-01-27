@@ -1,6 +1,103 @@
 body {
-    background-color: gray;
+    background-color: var(--color-dark);
     font-family: "Roboto", sans-serif;
     font-weight: normal;
-    color: white;
+    color: var(--color-white);
+}
+
+._section-title {
+    font-size: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 26px;
+}
+
+._scills-card {
+    border-radius: 8px;
+    padding: 18px 26px;
+    box-shadow: 2px 4px 10px var(--color-black);
+    transition: 1s;
+}
+
+._scills-card:hover {
+    box-shadow: 1px 1px 16px var(--color-black) inset;
+}
+
+.container {
+    margin: auto;
+    max-width: 1280px;
+    padding: 0 16px;
+}
+
+.hero {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.hero__wrapper {
+    text-align: center;
+}
+
+.hero__suptitle {
+    font-size: 2vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 14px;
+}
+
+.hero__suptitle span {
+    color: var(--color-accent);
+}
+
+.hero__title {
+    font-size: 6vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 16px;
+}
+
+.hero__subtitle {
+    font-size: 1vw;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+}
+
+.hero__trigger {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 26px;
+}
+
+.scills__hard-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    ._section-title {
+        font-size: 4vw;
+    }
+
+    ._scills-card {
+        width: 100%;
+    }
+
+    .hero__suptitle {
+        font-size: 3vw;
+        letter-spacing: 0.3rem;
+    }
+
+    .hero__title {
+        font-size: 8vw;
+    }
+
+    .hero__subtitle {
+        font-size: 2vw;
+        letter-spacing: 0.2rem;
+    }
 }
