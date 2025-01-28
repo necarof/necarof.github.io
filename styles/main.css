@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--color-dark);
     font-family: "Roboto", sans-serif;
@@ -5,11 +9,16 @@ body {
     color: var(--color-white);
 }
 
+._section {
+    padding: 100px 0 40px;
+}
+
 ._section-title {
+    margin-bottom: 36px;
     font-size: 2vw;
     text-transform: uppercase;
+    text-align: center;
     letter-spacing: 0.5rem;
-    margin-bottom: 26px;
 }
 
 ._scills-card {
@@ -42,10 +51,10 @@ body {
 }
 
 .hero__suptitle {
+    margin-bottom: 14px;
     font-size: 2vw;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    margin-bottom: 14px;
 }
 
 .hero__suptitle span {
@@ -53,10 +62,10 @@ body {
 }
 
 .hero__title {
+    margin-bottom: 16px;
     font-size: 6vw;
     text-transform: uppercase;
     letter-spacing: 0.5rem;
-    margin-bottom: 16px;
 }
 
 .hero__subtitle {
@@ -72,7 +81,8 @@ body {
     bottom: 26px;
 }
 
-.scills__hard-list {
+.scills__hard-list,
+.scills__soft-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
