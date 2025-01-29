@@ -78,7 +78,8 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 26px;
+    bottom: 30px;
+    animation: swaying 1.6s infinite linear;
 }
 
 .scills__hard-list,
