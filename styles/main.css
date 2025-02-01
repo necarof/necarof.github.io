@@ -96,10 +96,6 @@ body {
     transition: 1s;
 }
 
-.work__list-item:hover {
-    box-shadow: var(--inset-shadow);
-}
-
 .work__list-item:not(:last-child) {
     margin-bottom: 40px;
 }
