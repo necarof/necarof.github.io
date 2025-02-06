@@ -1,0 +1,57 @@
+.hero {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    &__suptitle {
+        margin-bottom: 14px;
+        font-size: 2vw;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+
+        span {
+            color: var(--color-accent);
+        }
+
+        @media screen and (max-width: 768px) {
+            font-size: 3vw;
+            letter-spacing: 0.3rem;
+        }
+    }
+
+    &__title {
+        margin-bottom: 16px;
+        font-size: 6vw;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+
+        @media screen and (max-width: 768px) {
+            font-size: 8vw;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1vw;
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+
+        @media screen and (max-width: 768px) {
+            font-size: 2vw;
+            letter-spacing: 0.2rem;
+        }
+    }
+
+    &__trigger {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 30px;
+        animation: swaying 1.6s infinite linear;
+    }
+}

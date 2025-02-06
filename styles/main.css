@@ -378,6 +378,17 @@ label {
   --inset-shadow-weak: 1px 1px 8px var(--color-black) inset;
 }
 
+@keyframes swaying {
+  0% {
+    bottom: 30px;
+  }
+  50% {
+    bottom: 46px;
+  }
+  100% {
+    bottom: 30px;
+  }
+}
 body {
   background-color: var(--color-dark);
   font-family: "Roboto", sans-serif;
@@ -389,6 +400,61 @@ body {
   margin: auto;
   max-width: 1280px;
   padding: 0 16px;
+}
+
+.hero {
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.hero__wrapper {
+  text-align: center;
+}
+.hero__suptitle {
+  margin-bottom: 14px;
+  font-size: 2vw;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+.hero__suptitle span {
+  color: var(--color-accent);
+}
+@media screen and (max-width: 768px) {
+  .hero__suptitle {
+    font-size: 3vw;
+    letter-spacing: 0.3rem;
+  }
+}
+.hero__title {
+  margin-bottom: 16px;
+  font-size: 6vw;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .hero__title {
+    font-size: 8vw;
+  }
+}
+.hero__subtitle {
+  font-size: 1vw;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .hero__subtitle {
+    font-size: 2vw;
+    letter-spacing: 0.2rem;
+  }
+}
+.hero__trigger {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 30px;
+  animation: swaying 1.6s infinite linear;
 }
 
 /*# sourceMappingURL=main.css.map */
