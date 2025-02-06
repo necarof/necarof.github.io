@@ -361,4 +361,34 @@ label {
   cursor: pointer;
 }
 
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto-Regular.ttf) format("truetype"), url(../fonts/Roboto-Regular.woff) format("woff");
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+:root {
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark: #1f1d28;
+  --color-accent: #62cee1;
+  --box-shadow: 2px 4px 10px var(--color-black);
+  --inset-shadow: 1px 1px 16px var(--color-black) inset;
+  --inset-shadow-weak: 1px 1px 8px var(--color-black) inset;
+}
+
+body {
+  background-color: var(--color-dark);
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  color: var(--color-white);
+}
+
+.container {
+  margin: auto;
+  max-width: 1280px;
+  padding: 0 16px;
+}
+
 /*# sourceMappingURL=main.css.map */

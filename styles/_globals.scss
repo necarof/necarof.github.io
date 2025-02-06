@@ -1,0 +1,12 @@
+body {
+    background-color: var(--color-dark);
+    font-family: "Roboto", sans-serif;
+    font-weight: normal;
+    color: var(--color-white);
+}
+
+.container {
+    margin: auto;
+    max-width: 1280px;
+    padding: 0 16px;
+}
