@@ -372,21 +372,20 @@ label {
   --color-white: #ffffff;
   --color-black: #000000;
   --color-dark: #1f1d28;
+  --color-gray: rgba(255, 255, 255, 0.3);
   --color-accent: #62cee1;
   --box-shadow: 2px 4px 10px var(--color-black);
   --inset-shadow: 1px 1px 16px var(--color-black) inset;
   --inset-shadow-weak: 1px 1px 8px var(--color-black) inset;
+  --section-padding: 80px 0 40px;
 }
 
-@keyframes swaying {
+@keyframes drop {
   0% {
-    bottom: 30px;
-  }
-  50% {
-    bottom: 46px;
+    top: -100%;
   }
   100% {
-    bottom: 30px;
+    top: 110%;
   }
 }
 body {
@@ -398,8 +397,21 @@ body {
 
 .container {
   margin: auto;
-  max-width: 1280px;
+  max-width: 1536px;
   padding: 0 16px;
+}
+
+._section-title {
+  margin-bottom: 36px;
+  font-size: 2vw;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  ._section-title ._section-title {
+    font-size: 4vw;
+  }
 }
 
 .hero {
@@ -407,10 +419,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
 }
 .hero__wrapper {
+  padding: 60px 0;
+  position: relative;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .hero__wrapper {
+    padding: 30px 0;
+  }
 }
 .hero__suptitle {
   margin-bottom: 14px;
@@ -445,16 +463,58 @@ body {
 }
 @media screen and (max-width: 768px) {
   .hero__subtitle {
-    font-size: 2vw;
+    font-size: 2.5vw;
     letter-spacing: 0.2rem;
   }
 }
-.hero__trigger {
+.hero .lines {
   position: absolute;
+  bottom: 0;
   left: 50%;
-  transform: translateX(-50%);
-  bottom: 30px;
-  animation: swaying 1.6s infinite linear;
+  transform: translate(-50%, 100%);
+  height: 24dvh;
+  width: 50%;
+  border-top: 1px solid var(--color-gray);
+}
+.hero .line {
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  background: var(--color-gray);
+  overflow: hidden;
+}
+.hero .line::after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 15vh;
+  width: 100%;
+  top: -50%;
+  left: 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-white) 75%, var(--color-white) 100%);
+  animation: drop 7s 0s infinite;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+}
+.hero .line:nth-child(1) {
+  margin-left: -10%;
+  height: 68%;
+}
+.hero .line:nth-child(1)::after {
+  animation-delay: 2s;
+}
+.hero .line:nth-child(3) {
+  margin-left: 10%;
+  height: 68%;
+}
+.hero .line:nth-child(3)::after {
+  animation-delay: 2.5s;
+}
+
+.stack {
+  padding: var(--section-padding);
 }
 
 /*# sourceMappingURL=main.css.map */

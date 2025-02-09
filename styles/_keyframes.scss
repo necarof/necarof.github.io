@@ -1,11 +1,8 @@
-@keyframes swaying {
+@keyframes drop {
     0% {
-        bottom: 30px;
-    }
-    50% {
-        bottom: 46px;
+      top: -100%;
     }
     100% {
-        bottom: 30px;
+        top: 110%;
     }
 }
