@@ -393,14 +393,14 @@ a:not([class]) {
     text-decoration-skip-ink: auto;
 }
 
-img video {
+img, video {
     max-width: 100%;
     display: block;
-	height: auto;
+    height: auto;
 }
 
 button,
 label {
-  cursor: pointer;
+    cursor: pointer;
 }
 

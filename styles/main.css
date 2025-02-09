@@ -350,7 +350,7 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
-img video {
+img, video {
   max-width: 100%;
   display: block;
   height: auto;
@@ -402,14 +402,14 @@ body {
 }
 
 ._section-title {
-  margin-bottom: 36px;
+  margin-bottom: 46px;
   font-size: 2vw;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5rem;
 }
 @media screen and (max-width: 768px) {
-  ._section-title ._section-title {
+  ._section-title {
     font-size: 4vw;
   }
 }
@@ -515,6 +515,41 @@ body {
 
 .stack {
   padding: var(--section-padding);
+}
+.stack__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 40px;
+}
+@media screen and (max-width: 1024px) {
+  .stack__list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media screen and (max-width: 768px) {
+  .stack__list {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+.stack__list-item {
+  display: flex;
+  align-items: center;
+  padding: 30px 20px;
+  border: 1px solid var(--color-gray);
+}
+.stack__list-item-icon {
+  width: 68px;
+  min-width: 68px;
+  height: 68px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 20px;
+  margin-right: 40px;
+  border-right: 1px solid var(--color-gray);
+}
+.stack__list-item-icon img {
+  max-width: 48px;
 }
 
 /*# sourceMappingURL=main.css.map */

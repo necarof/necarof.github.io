@@ -12,15 +12,13 @@ body {
 }
 
 ._section-title {
-    margin-bottom: 36px;
+    margin-bottom: 46px;
     font-size: 2vw;
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 0.5rem;
 
     @media screen and (max-width: 768px) {
-        ._section-title {
-            font-size: 4vw;
-        }
+        font-size: 4vw;
     }
 }
