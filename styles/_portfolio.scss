@@ -1,3 +1,22 @@
 .portfolio {
     padding: var(--section-padding);
+
+    &__list-item {
+        display: flex;
+        padding: 60px 40px;
+        border: 1px solid var(--color-gray);
+
+        &:not(:last-child) {
+            margin-bottom: 60px;
+        }
+    }
+
+    &__list-images {
+        display: flex;
+        column-gap: 20px;
+    }
+
+    &__list-img {
+        cursor: pointer;
+    }
 }

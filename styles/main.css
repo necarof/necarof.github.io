@@ -555,5 +555,20 @@ body {
 .portfolio {
   padding: var(--section-padding);
 }
+.portfolio__list-item {
+  display: flex;
+  padding: 60px 40px;
+  border: 1px solid var(--color-gray);
+}
+.portfolio__list-item:not(:last-child) {
+  margin-bottom: 60px;
+}
+.portfolio__list-images {
+  display: flex;
+  column-gap: 20px;
+}
+.portfolio__list-img {
+  cursor: pointer;
+}
 
 /*# sourceMappingURL=main.css.map */
