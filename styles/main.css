@@ -585,13 +585,27 @@ a:visited {
   border-radius: 6px;
   overflow: hidden;
   cursor: pointer;
+  position: relative;
   transition: all 0.2s;
+}
+.portfolio__list-img::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-color: var(--color-dark);
+  opacity: 0.3;
+  z-index: 10;
 }
 .portfolio__list-img:not(:first-child) {
   display: none;
 }
 .portfolio__list-img:hover {
   transform: scale(1.05);
+}
+.portfolio__list-img:hover::before {
+  opacity: 0;
 }
 @media screen and (max-width: 920px) {
   .portfolio__list-img {
@@ -641,6 +655,9 @@ a:visited {
 }
 .portfolio__list-stack-item img {
   width: 50%;
+}
+.portfolio__list-stack-item:hover {
+  border-color: var(--color-accent);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -24,7 +24,19 @@
         border-radius: 6px;
         overflow: hidden;
         cursor: pointer;
+        position: relative;
         transition: all 0.2s;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-color: var(--color-dark);
+            opacity: 0.3;
+            z-index: 10;
+        }
 
         &:not(:first-child) {
             display: none;
@@ -32,6 +44,10 @@
 
         &:hover {
             transform: scale(1.05);
+
+            &::before {
+                opacity: 0;
+            }
         }
 
         @media screen and (max-width: 920px) {
@@ -82,6 +98,10 @@
 
         img {
             width: 50%;
+        }
+
+        &:hover {
+            border-color: var(--color-accent);
         }
     }
 }
