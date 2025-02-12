@@ -5,6 +5,15 @@ body {
     color: var(--color-white);
 }
 
+a {
+    color: var(--color-accent);
+    text-decoration: none;
+
+    &:visited {
+        color: var(--color-accent);
+    }
+}
+
 .container {
     margin: auto;
     max-width: 1536px;
