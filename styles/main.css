@@ -660,4 +660,62 @@ a:visited {
   border-color: var(--color-accent);
 }
 
+.experience {
+  padding: var(--section-padding);
+}
+.experience__list-item {
+  padding: 60px 40px;
+  border: 1px solid var(--color-gray);
+  flex-direction: column;
+  row-gap: 30px;
+}
+.experience__list-item:not(:last-child) {
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 920px) {
+  .experience__list-item {
+    padding: 40px 20px;
+  }
+}
+.experience__list-time {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 1px solid var(--color-gray);
+  border-radius: 26px;
+  color: var(--color-accent);
+}
+.experience__list-title {
+  margin-bottom: 4px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+.experience__list-subtitle {
+  margin-bottom: 26px;
+  color: var(--color-accent);
+}
+.experience__list-description {
+  margin-bottom: 26px;
+}
+.experience__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.experience__stack-item {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray);
+}
+.experience__stack-item img {
+  width: 50%;
+}
+.experience__stack-item:hover {
+  border-color: var(--color-accent);
+}
+
 /*# sourceMappingURL=main.css.map */
