@@ -718,4 +718,50 @@ a:visited {
   border-color: var(--color-accent);
 }
 
+.footer {
+  margin-top: 80px;
+}
+.footer__wrapper {
+  padding: 60px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 60px;
+  border-top: 1px solid var(--color-gray);
+}
+@media screen and (max-width: 768px) {
+  .footer__wrapper {
+    padding: 40px;
+    flex-direction: column;
+    column-gap: 0;
+    row-gap: 40px;
+  }
+}
+.footer__text {
+  font-size: 26px;
+}
+.footer__contact-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.footer__contact-list-item {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-gray);
+}
+.footer__contact-list-item a {
+  width: 70%;
+  height: 70%;
+  color: var(--color-white);
+  transition: all 0.2s;
+}
+.footer__contact-list-item a:hover {
+  color: var(--color-accent);
+}
+
 /*# sourceMappingURL=main.css.map */

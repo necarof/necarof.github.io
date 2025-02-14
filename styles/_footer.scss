@@ -1,0 +1,50 @@
+.footer {
+    margin-top: 80px;
+
+    &__wrapper {
+        padding: 60px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 60px;
+        border-top: 1px solid var(--color-gray);
+
+        @media screen and (max-width: 768px) {
+            padding: 40px;
+            flex-direction: column;
+            column-gap: 0;
+            row-gap: 40px;
+        }
+    }
+
+    &__text {
+        font-size: 26px;
+    }
+
+    &__contact-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    &__contact-list-item {
+        width: 64px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        border: 1px solid var(--color-gray);
+
+        a {
+            width: 70%;
+            height: 70%;
+            color: var(--color-white);
+            transition: all 0.2s;
+
+            &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+}
