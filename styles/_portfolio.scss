@@ -6,6 +6,7 @@
         column-gap: 60px;
         padding: 60px 40px;
         border: 1px solid var(--color-gray);
+        box-shadow: var(--box-shadow);
 
         &:not(:last-child) {
             margin-bottom: 60px;
