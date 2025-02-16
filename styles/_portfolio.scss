@@ -5,7 +5,7 @@
         display: flex;
         column-gap: 60px;
         padding: 60px 40px;
-        border: 1px solid var(--color-gray);
+        border-radius: var(--border-radius);
         box-shadow: var(--box-shadow);
 
         &:not(:last-child) {
@@ -89,16 +89,19 @@
     }
 
     &__list-stack-item {
-        width: 64px;
-        height: 64px;
+        width: var(--item-size);
+        height: var(--item-size);
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        border: 1px solid var(--color-gray);
+        border: 1px solid transparent;
+        box-shadow: var(--inset-shadow);
+        transition: all 0.5s;
 
         img {
             width: 50%;
+            object-fit: contain;
         }
 
         &:hover {

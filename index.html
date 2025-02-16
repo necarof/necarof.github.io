@@ -22,7 +22,22 @@
 </head>
 <body>
 
-    <section class="hero">
+    <section class="hero" id="hero">
+        <header class="header">
+            <nav>
+                <ul class="header__nav">
+                    <li class="header__nav-item">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#experience">Work Experience</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#contacts">Contacts</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
         <div class="hero__wrapper">
             <h2 class="hero__suptitle"><span>Hello!</span> My name is</h2>
             <h1 class="hero__title">Nikita Mastepanov</h1>
@@ -97,7 +112,7 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="container">
             <h2 class="portfolio__title _section-title">Portfolio</h2>
             <ul class="portfolio__list">
@@ -231,7 +246,7 @@
         </div>
     </section>
 
-    <section class="experience">
+    <section class="experience" id="experience">
         <div class="container">
             <h2 class="experience__title _section-title">Work Experience</h2>
             <ul class="experience__list">
@@ -244,7 +259,7 @@
                             TOO Strong soft
                         </h4>
                         <div class="experience__list-subtitle">
-                            Front-end developer | html layout designer
+                            Front-end developer
                         </div>
                         <p class="experience__list-description">
                             Frontend development, refactoring and updating old projects
@@ -274,6 +289,9 @@
                             <li class="experience__stack-item">
                                 <img src="./images/icons/adobe-photoshop.svg" alt="adobe photoshop" title="adobe photoshop">
                             </li>
+                            <li class="experience__stack-item">
+                                <img src="./images/icons/laravel.svg" alt="laravel" title="laravel">
+                            </li>
                         </ul>
                     </article>
                 </li>
@@ -286,7 +304,7 @@
                             Istyle.kz
                         </h4>
                         <div class="experience__list-subtitle">
-                            Web Developer
+                            Web designer | HTML layout designer
                         </div>
                         <p class="experience__list-description">
                             Designing and prototyping websites, landing pages, and mobile applications
@@ -320,12 +338,12 @@
         </div>
     </section>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
         <div class="container">
             <div class="footer__wrapper">
                 <div class="footer__inner">
                     <p class="footer__text">
-                        Contact me if you want to suggest a project.
+                        Contact me if you want to offer an interesting job.
                     </p>
                 </div>
                 <div class="footer__inner">
@@ -362,6 +380,13 @@
                 </div>
             </div>
         </div>
+        <a href="#hero" class="footer__totop-btn">
+            <?xml version="1.0" encoding="utf-8"?>
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 120.64" style="enable-background:new 0 0 122.88 120.64" xml:space="preserve">
+                    <g><path d="M108.91,66.6c1.63,1.55,3.74,2.31,5.85,2.28c2.11-0.03,4.2-0.84,5.79-2.44l0.12-0.12c1.5-1.58,2.23-3.6,2.2-5.61 c-0.03-2.01-0.82-4.01-2.37-5.55C102.85,37.5,84.9,20.03,67.11,2.48c-0.05-0.07-0.1-0.13-0.16-0.19C65.32,0.73,63.19-0.03,61.08,0 c-2.11,0.03-4.21,0.85-5.8,2.45l-0.26,0.27C37.47,20.21,19.87,37.65,2.36,55.17C0.82,56.71,0.03,58.7,0,60.71 c-0.03,2.01,0.7,4.03,2.21,5.61l0.15,0.15c1.58,1.57,3.66,2.38,5.76,2.41c2.1,0.03,4.22-0.73,5.85-2.28l47.27-47.22L108.91,66.6 L108.91,66.6z M106.91,118.37c1.62,1.54,3.73,2.29,5.83,2.26c2.11-0.03,4.2-0.84,5.79-2.44l0.12-0.12c1.5-1.57,2.23-3.6,2.21-5.61 c-0.03-2.01-0.82-4.02-2.37-5.55C101.2,89.63,84.2,71.76,67.12,54.24c-0.05-0.07-0.11-0.14-0.17-0.21 c-1.63-1.55-3.76-2.31-5.87-2.28c-2.11,0.03-4.21,0.85-5.8,2.45C38.33,71.7,21.44,89.27,4.51,106.8l-0.13,0.12 c-1.54,1.53-2.32,3.53-2.35,5.54c-0.03,2.01,0.7,4.03,2.21,5.61l0.15,0.15c1.58,1.57,3.66,2.38,5.76,2.41 c2.1,0.03,4.22-0.73,5.85-2.28l45.24-47.18L106.91,118.37L106.91,118.37z" fill="currentColor"/>
+                    </g>
+                </svg>
+        </a>
     </footer>
 
 </body>

@@ -1,0 +1,59 @@
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    padding: 30px 20px;
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
+
+        @media screen and (max-width: 768px) {
+            column-gap: 16px;
+        }
+    }
+
+    &__nav-item {
+        text-transform: uppercase;
+        font-size: 14px;
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            display: block;
+            height: 2px;
+            width: 26px;
+            background-color: var(--color-white);
+            transition: all 0.5s;
+        }
+
+        a {
+            color: var(--color-white);
+            transition: all 0.5s;
+        }
+
+        &:hover {
+
+            a {
+                color: var(--color-accent);
+            }
+
+            &::before {
+                width: 100%;
+                background-color: var(--color-accent);
+            }
+        }
+    }
+}

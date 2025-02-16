@@ -5,9 +5,14 @@
     --color-gray: rgba(255, 255, 255, 0.3);
     --color-accent: #62cee1;
 
-    --box-shadow: 2px 4px 10px var(--color-black);
-    --inset-shadow: 1px 1px 16px var(--color-black) inset;
-    --inset-shadow-weak: 1px 1px 8px var(--color-black) inset;
+    --box-shadow: -4px -4px 12px hsla(0,0%, 100%, .05),
+        4px 4px 12px #000, 
+        inset -22px -14px 14px 2px hsla(0,0%, 100%, 0),
+        inset 8px 4px 20px 12px transparent;
+    --inset-shadow: inset -2px -2px 4px hsla(0, 0%, 100%, .1),
+    inset 2px 2px 4px rgba(0, 0, 0, .5);
 
     --section-padding: 120px 0 60px;
+    --border-radius: 14px;
+    --item-size: 64px;
 }

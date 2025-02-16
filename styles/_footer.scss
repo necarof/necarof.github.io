@@ -1,19 +1,24 @@
 .footer {
-    margin-top: 80px;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    position: relative;
 
     &__wrapper {
-        padding: 60px 0;
+        padding: 60px 80px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         column-gap: 60px;
-        border-top: 1px solid var(--color-gray);
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
 
         @media screen and (max-width: 768px) {
             padding: 40px;
             flex-direction: column;
+            justify-content: center;
             column-gap: 0;
             row-gap: 40px;
+            text-align: center;
         }
     }
 
@@ -25,16 +30,22 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+
+        @media screen and (max-width: 768px) {
+            justify-content: center;
+        }
     }
 
     &__contact-list-item {
-        width: 64px;
-        height: 64px;
+        width: var(--item-size);
+        height: var(--item-size);
         display: flex;
         align-items: center;
         justify-content: center;
         border-radius: 50%;
-        border: 1px solid var(--color-gray);
+        border: 1px solid transparent;
+        box-shadow: var(--inset-shadow);
+        transition: all 0.5s;
 
         a {
             width: 70%;
@@ -43,6 +54,35 @@
             transition: all 0.2s;
 
             &:hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    &__totop-btn {
+        width: 58px;
+        height: 58px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid transparent;
+        box-shadow: var(--inset-shadow);
+        transition: all 0.5s;
+        bottom: 18px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        svg {
+            max-width: 50%;
+            color: var(--color-white);
+        }
+
+        &:hover {
+            border-color: var(--color-accent);
+
+            svg {
                 color: var(--color-accent);
             }
         }
