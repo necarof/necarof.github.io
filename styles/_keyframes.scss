@@ -1,8 +1,11 @@
-@keyframes drop {
+@keyframes scale {
     0% {
-      top: -100%;
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.8);
     }
     100% {
-        top: 110%;
+        transform: scale(1);
     }
 }

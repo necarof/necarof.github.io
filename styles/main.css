@@ -385,12 +385,15 @@ label {
   --item-size: 64px;
 }
 
-@keyframes drop {
+@keyframes scale {
   0% {
-    top: -100%;
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.8);
   }
   100% {
-    top: 110%;
+    transform: scale(1);
   }
 }
 html {
@@ -460,6 +463,8 @@ a:visited {
   bottom: 0;
   width: 100%;
   height: 56px;
+  opacity: 0.8;
+  pointer-events: none;
   background: linear-gradient(transparent, #1f1d28);
   z-index: 10;
 }
@@ -511,50 +516,20 @@ a:visited {
     letter-spacing: 0.2rem;
   }
 }
-.hero .lines {
+.hero__trigger {
   position: absolute;
-  bottom: 0;
   left: 50%;
-  transform: translate(-50%, 100%);
-  height: 24dvh;
-  width: 50%;
-  border-top: 1px solid var(--color-gray);
+  transform: translateX(-50%) rotate(180deg);
+  bottom: 26px;
+  width: 36px;
+  height: 36px;
+  z-index: 20;
 }
-.hero .line {
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  top: 0;
-  left: 50%;
-  background: var(--color-gray);
-  overflow: hidden;
+.hero__trigger a {
+  color: var(--color-white);
 }
-.hero .line::after {
-  content: "";
-  display: block;
-  position: absolute;
-  height: 15vh;
-  width: 100%;
-  top: -50%;
-  left: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--color-white) 75%, var(--color-white) 100%);
-  animation: drop 7s 0s infinite;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-}
-.hero .line:nth-child(1) {
-  margin-left: -10%;
-  height: 68%;
-}
-.hero .line:nth-child(1)::after {
-  animation-delay: 2s;
-}
-.hero .line:nth-child(3) {
-  margin-left: 10%;
-  height: 68%;
-}
-.hero .line:nth-child(3)::after {
-  animation-delay: 2.5s;
+.hero__trigger svg {
+  animation: scale 4s infinite linear;
 }
 
 .header {
