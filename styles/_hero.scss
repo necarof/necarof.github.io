@@ -5,10 +5,39 @@
     align-items: center;
     position: relative;
 
+    &__video {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+
+        video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            object-fit: cover;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 56px;
+            background: linear-gradient(transparent, #1f1d28);
+            z-index: 10;
+        }
+    }
+
     &__wrapper {
         padding: 60px 0;
         position: relative;
         text-align: center;
+        z-index: 10;
 
         @media screen and (max-width: 768px) {
             padding: 30px 0;
